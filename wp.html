@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>焦点轮播图</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+        }
+        body{
+            padding: 20px;
+        }
+        #figure{
+            width: 770px;
+            height: 300px;
+            border: 3px solid #333;
+            overflow: hidden;
+            position: relative;
+        }
+        #list{
+            width: 4620px;
+            height: 300px;
+            position: absolute;
+            z-index: 1;
+        }
+        #list img{
+            float: left;
+        }
+        #bottons{
+            position: absolute;
+            height: 10px;
+            width: 100px;
+            z-index: 2;
+            bottom: 20px;
+            left: 350px;
+            border: 1px solid yellow;
+        }
+        #buttons span{
+            cursor: pointer;
+            float: left;
+            border: 1px solid #fff;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #333;
+            margin-left: 5px;
+        }
+        #buttons .on{
+            background: orange;
+        }
+        .arrow{
+            cursor: pointer;
+            display: none;
+            line-height: 39px;
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+            width: 40px;
+            position: absolute;
+            z-index: 2;
+            top: 140px;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: #fff;
+        }
+        .arrow:hover{
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        #figure:hover .arrow{
+            display: block;
+        }
+        #prev{
+            left: 20px;
+        }
+        #next{
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="figure">
+<!--
+        <div id="list" style="left:-770px;">
+            <img src="images/003.jpg" alt="">
+            <img src="images/001.jpg" alt="">
+            <img src="images/002.jpg" alt="">
+            <img src="images/003.jpg" alt="">
+            <img src="images/002.jpg" alt="">
+            <img src="images/001.jpg" alt="">
+        </div>
+-->
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+    </div>
+</body>
+</html>
